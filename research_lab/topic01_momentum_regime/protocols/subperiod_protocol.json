@@ -1,0 +1,46 @@
+{
+  "protocol": "subperiod_walkforward_subperiod",
+  "topic": "T01_momentum_regime",
+  "round": "phase1_5_no_ge_5yr_data",
+  "note": "本文件仅为协议预注册（pre-registration）。本轮无 >=5 年数据，只登记方法，不生成任何结果。",
+  "segment_types": {
+    "calendar_subperiod": {
+      "description": "机械按日历切分的子周期，例如按自然年（annual）、自然季（quarterly）等。切分规则在确定后必须写入本文件并冻结，不得根据回测结果回头调整。",
+      "status": "PROVISIONAL",
+      "registered_splits": [
+        {
+          "name": "annual",
+          "method": "calendar_year",
+          "params": {},
+          "status": "PROVISIONAL"
+        }
+      ]
+    },
+    "descriptive_market_state": {
+      "description": "事后（POST-HOC）对样本期内市场状态的描述性划分（如牛市/熊市/震荡），仅供可读性说明与状态归因，不代表任何可在回测中机械复现的交易信号或样本划分。",
+      "status": "DESCRIPTIVE_ONLY",
+      "may_be_used_for_backtest": false,
+      "warning": "描述性市场状态切段不得用于样本内/样本外交易回测，亦不得作为 walk-forward 的 fold 边界。"
+    },
+    "tradable_regime": {
+      "description": "可交易的市场状态/regime 切段（如基于波动率或动量的 regime 开关）。本轮Phase-1.5明确禁止实现，归属未来 T01-05。",
+      "status": "PROHIBITED_IN_PHASE_1_5",
+      "belongs_to": "T01-05",
+      "implemented_this_round": false
+    }
+  },
+  "pre_registration_rule": "split method MUST be registered before seeing any results; 禁止结果导向切段（no picking best/worst periods after seeing returns）",
+  "warm_up_awareness": {
+    "longest_lookback_trading_days": 120,
+    "rule": "任何测试窗口必须把预热期（warm-up）与评估期（evaluation）分离：预热期仅用于填充最长 120 个交易日的指标，不参与绩效统计。",
+    "degeneracy_artifact": {
+      "summary": "133-day degeneracy artifact：因最长 lookback 为 120 个交易日，而本轮总样本仅约 133 个交易日（2025-12-15~2026-07-03），120 天预热 + 133 天总样本仅余约 6 笔可交易样本，导致 8 个变体（variants）退化无法评估。",
+      "longest_lookback_trading_days": 120,
+      "total_sample_trading_days": 133,
+      "remaining_evaluation_trades_approx": 6,
+      "degenerated_variants": 8,
+      "implication": "在样本窗短于 (warmup + 最小评估样本) 时，子周期/分 fold 评估无意义，必须等待更长外部数据。"
+    }
+  },
+  "status": "PRE_REGISTERED_ONLY"
+}

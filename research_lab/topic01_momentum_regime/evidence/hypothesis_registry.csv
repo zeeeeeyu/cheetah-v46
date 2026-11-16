@@ -1,0 +1,9 @@
+experiment_id,title,ext_provenance,ext_hypothesis,evidence_review_status,hypothesis_ref,internal_validation,oos_tested,decision_status,notes
+T01-01,绝对动量 vs 横截面动量选股贡献,NOT_APPLICABLE,STRONG,PENDING,,BACKTESTED,false,RESEARCH_ONLY,"动量因子为多市场强证据；但本实验仅 133d 单样本，不晋级生产"
+T01-02,多周期动量窗口加权方案,NOT_APPLICABLE,MODERATE,PENDING,,BACKTESTED,false,RESEARCH_ONLY,"周期加权有效但有样本依赖；需更长样本验证"
+T01-03,逆下行波动风险缩放贡献,NOT_APPLICABLE,MODERATE,PENDING,,BACKTESTED,false,RESEARCH_ONLY,"拍板(决策3)：PROMOTION_CANDIDATE/RESEARCH_ONLY，禁止进 c56；依赖缩放方式与样本"
+T01-04,趋势质量组件(FI/MA alignment)贡献,NOT_APPLICABLE,MODERATE,PENDING,,BACKTESTED,false,RESEARCH_ONLY,"趋势质量构造有文献支持但本实现为工程启发式"
+T01-10,多速度组合稳定性,NOT_APPLICABLE,MODERATE,PENDING,,BACKTESTED,false,RESEARCH_ONLY,"速度组合稳健性待多样本确认"
+T01-05,行业/板块轮动动量(预注册),NOT_APPLICABLE,PENDING_REVIEW,PENDING,,UNTESTED,false,NOT_USED,"Phase-1.5 预注册；BLOCKED_BY_EXTERNAL_DATA，待数据补齐后执行"
+T01-06,宏观状态调节动量暴露(预注册),NOT_APPLICABLE,PENDING_REVIEW,PENDING,,UNTESTED,false,NOT_USED,"Phase-1.5 预注册；BLOCKED_BY_EXTERNAL_DATA，待数据补齐后执行"
+T01-07,交易成本敏感性规范化(预注册),NOT_APPLICABLE,PENDING_REVIEW,PENDING,,UNTESTED,false,NOT_USED,"Phase-1.5 预注册；BLOCKED_BY_EXTERNAL_DATA，待数据补齐后执行"

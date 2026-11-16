@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "mode": "ETF_ONLY",
+  "last_executed_trade_date": null,
+  "current_weights": {"CASH": 1.0},
+  "note": "SYNTHETIC_PAPER_TEMPLATE"
+}

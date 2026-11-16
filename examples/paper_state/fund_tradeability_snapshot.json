@@ -1,0 +1,7 @@
+{
+  "schema_version": 3,
+  "mode": "FUND_NAV_ONLY",
+  "as_of_date": null,
+  "funds": {},
+  "note": "SYNTHETIC_PAPER_TEMPLATE"
+}

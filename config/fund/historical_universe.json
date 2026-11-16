@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "长期研究成员资格。只在补齐当时可交易基金的直接净值和成员资格后，才可用于十年级动态候选池研究。",
+  "dynamic_historical_universe_ready": false,
+  "memberships": [
+    {
+      "symbol": "000051",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    },
+    {
+      "symbol": "000823",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    },
+    {
+      "symbol": "002251",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    },
+    {
+      "symbol": "160216",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    },
+    {
+      "symbol": "100032",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    },
+    {
+      "symbol": "000216",
+      "active_from": null,
+      "active_to": null,
+      "note": "当前仅保存账户/候选池元数据；未声明基金在 2014 年之前可交易。"
+    }
+  ]
+}

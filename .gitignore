@@ -1,0 +1,64 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.idea/
+.env
+*.db
+*.db-shm
+*.db-wal
+output/**/*.json
+output/**/*.csv
+output/**/*.md
+reports/**/*.txt
+storage/ledgers/account.db
+# V4.6 运行快照（每次运行不覆盖历史，属运行产物不入库）
+artifacts/
+
+# === Workstream F — Git Remote Readiness 加固 (本地安全审计补充) ===
+# 密钥 / 证书
+*.key
+*.pem
+*.p12
+*.pfx
+# 令牌 / 凭据文件
+*.token
+credentials*.json
+credentials*.yml
+credentials*.yaml
+secrets*.json
+secrets*.yaml
+secrets*.yml
+# 临时产物 / 日志 / 缓存
+*.log
+*.tmp
+tmp/
+.cache/
+# 研究原始下载（未来）：不入库
+research_lab/**/downloads/
+research_lab/**/raw_data/
+
+# === Topic-01 Phase-1.5 — 研究生成物排除 (确定性可再生物，禁止入库以免弄脏工作树) ===
+# 依据：run_all.main() 截断重写 experiment_registry.csv（覆盖 T01-01..T01-10 全部 25 个规范实验），
+#       且 pytest 每次运行仅重写 results/TEST-*.json 的时间戳（+ started_at/finished_at），
+#       内容结论不变，但会以时间戳噪声弄脏工作树。双轨证据落点 evidence/hypothesis_registry.csv（仍入库）。
+research_lab/topic01_momentum_regime/results/TEST-*.json
+research_lab/topic01_momentum_regime/experiment_registry.csv
+
+# 本地行情、运行状态和输出保留在各自工作站。
+/data/**
+/state/**
+/storage/**
+/output/**
+/reports/**
+!/data/*/
+!/output/*/
+!/reports/*/
+!/**/.gitkeep
+*.bak
+*.jsonl
+.env.*
+!.env.example
+research_lab/topic01_momentum_regime/datasets/*
+research_lab/topic01_momentum_regime/results/*

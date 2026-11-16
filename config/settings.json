@@ -1,0 +1,60 @@
+{
+  "system_name": "Quant V4.1-V4.5 Trusted Decision Upgrade",
+  "_note_provisional": "provisional_parameters 内的键为 D-01 决策（采纳方案 A）标记的未冻结参数：保留当前生效值，等 Wave 3 回测基础设施就绪后统一校正。改动这些值需回测依据。",
+  "provisional_parameters": [
+    "minimum_history_days",
+    "data.min_median_turnover_20d",
+    "portfolio.max_single_weight",
+    "execution.max_non_emergency_turnover"
+  ],
+  "mode": "ETF_ONLY",
+  "benchmark_symbol": "510300",
+  "scheduled_rebalance_interval_trading_days": 20,
+  "minimum_history_days": 126,
+  "data": {
+    "require_ohlcv": true,
+    "max_staleness_trading_days": 0,
+    "min_median_turnover_20d": 100000000,
+    "max_single_day_return_abs": 0.20,
+    "provider_mode": "local_only",
+    "allow_network_refresh": false
+  },
+  "signals": {
+    "short_window": 20,
+    "medium_window": 60,
+    "long_window": 120,
+    "fi_window": 60,
+    "minimum_absolute_momentum": 0.0,
+    "minimum_trend_quality": 0.42,
+    "minimum_rank_margin": 0.08,
+    "require_two_day_stability": true
+  },
+  "portfolio": {
+    "total_value": 1000000.0,
+    "max_selected_assets": 3,
+    "max_single_weight": 0.45,
+    "max_pair_correlation": 0.85,
+    "max_sector_weight": 0.60,
+    "neutral_equity_cap": 0.50,
+    "risk_off_equity_cap": 0.20,
+    "cash_symbol": "CASH"
+  },
+  "execution": {
+    "tolerance_band": 0.05,
+    "max_non_emergency_turnover": 0.35,
+    "estimated_one_way_cost": 0.0015,
+    "manual_approval_required": true
+  },
+  "regime": {
+    "atr_window": 20,
+    "chandelier_multiple": 3.0,
+    "hmm_shadow_only": true,
+    "hmm_min_history_days": 252
+  },
+  "governance": {
+    "champion_name": "V4.2 multi-factor + inverse-downside-vol",
+    "challenger_name": "V4.3 HRP shadow allocation",
+    "min_out_of_sample_decisions_before_review": 30,
+    "min_paper_days_before_review": 120
+  }
+}

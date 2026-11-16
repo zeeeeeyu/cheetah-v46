@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Topic-01 Evidence Framework Canonical Enums & Registry Schema",
+  "description": "Topic-01 Phase-1.5 (2026-08-07) canonical evidence enums and registry column contracts. Dual-track External Evidence (Provenance vs Hypothesis). UNKNOWN is FORBIDDEN in any enum value; use evidence_review_status=PENDING instead.",
+  "canonical_enums": {
+    "external_evidence_hypothesis": {
+      "description": "轨道B — 研究命题外部证据强度 (Hypothesis External Evidence)",
+      "values": ["NOT_APPLICABLE", "STRONG", "MODERATE", "MIXED", "WEAK", "CONTRADICTED"],
+      "forbidden": ["UNKNOWN"],
+      "note": "UNKNOWN 不得进入本枚举；未做文献综述用 evidence_review_status=PENDING 表达。"
+    },
+    "external_evidence_provenance": {
+      "description": "轨道A — 实验基线来源可信度 (Experiment Provenance Evidence)",
+      "values": ["NOT_APPLICABLE", "INTERNAL_RECONSTRUCTED", "FROZEN_LEGACY", "EXTERNAL_REPRO"]
+    },
+    "internal_validation": {
+      "description": "研究台内部验证强度",
+      "values": ["UNTESTED", "BACKTESTED", "WALK_FORWARD", "SHADOW", "PAPER", "LIVE_OBSERVED"],
+      "forbidden": ["OUT_OF_SAMPLE", "PAPER_TRADED"],
+      "note": "OUT_OF_SAMPLE 降级为 metadata oos_tested=true; PAPER_TRADED 归一为 PAPER。"
+    },
+    "decision_status": {
+      "description": "是否可进入生产（Agent 无权 auto-promote/freeze 参数 c56）",
+      "values": ["KEEP", "PROVISIONAL", "RESEARCH_ONLY", "REJECT", "NOT_USED"]
+    },
+    "evidence_review_status": {
+      "description": "文献综述状态，取代旧 UNKNOWN",
+      "values": ["PENDING", "IN_PROGRESS", "DONE"]
+    }
+  },
+  "registries": {
+    "hypothesis_registry.csv": {
+      "primary_key": "experiment_id",
+      "columns": {
+        "experiment_id": "string — 关联 experiment_registry.csv",
+        "title": "string — 假设简述",
+        "ext_provenance": "enum(external_evidence_provenance)",
+        "ext_hypothesis": "enum(external_evidence_hypothesis) | PENDING_REVIEW (占位)",
+        "evidence_review_status": "enum(evidence_review_status)",
+        "hypothesis_ref": "string — 关联 literature_registry.csv 的 lit_id (可空)",
+        "internal_validation": "enum(internal_validation)",
+        "oos_tested": "boolean — metadata 替代 OUT_OF_SAMPLE",
+        "decision_status": "enum(decision_status)",
+        "notes": "string"
+      },
+      "validation_rules": [
+        "ext_hypothesis 不得等于 UNKNOWN",
+        "evidence_review_status=PENDING 时 ext_hypothesis 可为空或 PENDING_REVIEW",
+        "internal_validation 不得等于 OUT_OF_SAMPLE / PAPER_TRADED"
+      ]
+    },
+    "literature_registry.csv": {
+      "primary_key": "lit_id",
+      "columns": {
+        "lit_id": "string",
+        "title": "string",
+        "authors_year": "string",
+        "topic": "string — 关联 experiment_id",
+        "external_evidence_strength": "enum(external_evidence_hypothesis) | PENDING",
+        "url_or_doi": "string (可空)",
+        "review_status": "enum [PENDING_FORMAL_REVIEW, REVIEWED, REJECTED]",
+        "notes": "string"
+      },
+      "note": "BLOCKED_BY_EXTERNAL_DATA 期间仅登记候选文献，review_status=PENDING_FORMAL_REVIEW，不得冒充已确认证据。"
+    }
+  },
+  "governance": {
+    "c55_c56_c57": "受控项 Agent 无权 auto-unlock/freeze；TESTED 仍为 17/63，本次本地加固不增加。",
+    "live_fail_closed": "LIVE_OBSERVED 仅真实 LIVE 观测可用；研究台不得声明。",
+    "no_fabrication": "所有外部证据须有 literature_registry 条目支撑；无则 evidence_review_status=PENDING。"
+  }
+}

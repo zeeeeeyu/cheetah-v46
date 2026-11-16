@@ -1,0 +1,42 @@
+{
+  "protocol": "walk_forward",
+  "topic": "T01_momentum_regime",
+  "round": "phase1_5_no_ge_5yr_data",
+  "note": "本文件仅为协议预注册（pre-registration）。本轮无 >=5 年数据，只登记框架与占位参数，不冻结任何具体年数，也不生成任何结果。",
+  "framework": {
+    "train": {
+      "description": "训练窗口：用于因子/参数/阈值的学习。具体年数为 PROVISIONAL，待数据到位后正式确定。",
+      "status": "PROVISIONAL"
+    },
+    "validation": {
+      "description": "验证窗口：用于超参数/模型选择的中止与早停判断。具体年数为 PROVISIONAL。",
+      "status": "PROVISIONAL"
+    },
+    "test": {
+      "description": "测试窗口（OOS）：仅用于最终报告，绝不参与任何参数/因子/模型/阈值搜索。具体年数为 PROVISIONAL。",
+      "status": "PROVISIONAL"
+    },
+    "roll_forward": true
+  },
+  "parameters": {
+    "train_years": "PROVISIONAL",
+    "validation_years": "PROVISIONAL",
+    "test_years": "PROVISIONAL",
+    "step_years": "PROVISIONAL",
+    "warning": "所有年数均为占位 PROVISIONAL，禁止把 3/1/1 或任何具体数字当作正式冻结值写入下游实验。正式数值须在本轮获得 >=5 年数据后、且经人工评审方可冻结。"
+  },
+  "warm_up_awareness": {
+    "longest_lookback_trading_days": 120,
+    "rule": "每个 train/validation/test 窗口都必须把预热期（warm-up，最长 120 个交易日）与评估期分离；预热期仅用于填充指标，不计入绩效。",
+    "degeneracy_artifact": {
+      "summary": "133-day degeneracy artifact：最长 lookback 120 个交易日 + 总样本约 133 个交易日，仅余约 6 笔可交易样本，导致 8 个变体退化。",
+      "longest_lookback_trading_days": 120,
+      "total_sample_trading_days": 133,
+      "remaining_evaluation_trades_approx": 6,
+      "degenerated_variants": 8
+    }
+  },
+  "oos_principle": "test period MUST NOT participate in parameter search / factor selection / model selection / threshold selection",
+  "internal_validation_enum_when_completed": "WALK_FORWARD",
+  "status": "PRE_REGISTERED_ONLY"
+}

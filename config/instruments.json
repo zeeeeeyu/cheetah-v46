@@ -1,0 +1,56 @@
+[
+  {
+    "symbol": "510300",
+    "name": "沪深300ETF",
+    "asset_class": "equity_broad",
+    "group": "equity",
+    "signal_symbol": "510300",
+    "trade_symbol": "510300",
+    "active": true
+  },
+  {
+    "symbol": "515000",
+    "name": "科技ETF",
+    "asset_class": "equity_sector",
+    "group": "equity",
+    "signal_symbol": "515000",
+    "trade_symbol": "515000",
+    "active": true
+  },
+  {
+    "symbol": "512660",
+    "name": "军工ETF",
+    "asset_class": "equity_sector",
+    "group": "equity",
+    "signal_symbol": "512660",
+    "trade_symbol": "512660",
+    "active": true
+  },
+  {
+    "symbol": "510880",
+    "name": "红利ETF",
+    "asset_class": "equity_dividend",
+    "group": "defensive_equity",
+    "signal_symbol": "510880",
+    "trade_symbol": "510880",
+    "active": true
+  },
+  {
+    "symbol": "518880",
+    "name": "黄金ETF",
+    "asset_class": "commodity_gold",
+    "group": "defensive",
+    "signal_symbol": "518880",
+    "trade_symbol": "518880",
+    "active": true
+  },
+  {
+    "symbol": "515030",
+    "name": "新能源汽车ETF",
+    "asset_class": "equity_sector",
+    "group": "equity",
+    "signal_symbol": "515030",
+    "trade_symbol": "515030",
+    "active": true
+  }
+]

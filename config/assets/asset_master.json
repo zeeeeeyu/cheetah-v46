@@ -1,0 +1,267 @@
+[
+  {
+    "symbol": "004813",
+    "name": "中欧先进制造股票A",
+    "asset_type": "ACTIVE_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "004813",
+    "trade_symbol": "004813",
+    "risk_clusters": [
+      "ADVANCED_MANUFACTURING",
+      "SMALL_MID_GROWTH"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "OBSERVATION_ONLY",
+    "share_class": "A",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "中欧先进制造。仅观察，不自动补仓或赎回。不生成自动订单。"
+  },
+  {
+    "symbol": "005658",
+    "name": "华夏沪深300ETF联接C",
+    "asset_type": "ETF_LINKED_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "005658",
+    "trade_symbol": "005658",
+    "risk_clusters": [
+      "LARGE_CAP_CORE"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "C",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "核心宽基配置。沪深300 ETF联接。"
+  },
+  {
+    "symbol": "013566",
+    "name": "华夏军工安全混合C",
+    "asset_type": "ACTIVE_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "013566",
+    "trade_symbol": "013566",
+    "risk_clusters": [
+      "MILITARY_DEFENSE",
+      "ADVANCED_MANUFACTURING",
+      "SMALL_MID_GROWTH"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "C",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "军工主题。涉及制造业、高波动、成长风险。"
+  },
+  {
+    "symbol": "016263",
+    "name": "银华高端制造业混合C",
+    "asset_type": "ACTIVE_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "016263",
+    "trade_symbol": "016263",
+    "risk_clusters": [
+      "ADVANCED_MANUFACTURING",
+      "SMALL_MID_GROWTH"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "C",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "高端制造主题。与013566共享ADVANCED_MANUFACTURING和SMALL_MID_GROWTH暴露。"
+  },
+  {
+    "symbol": "160216",
+    "name": "国泰大宗商品（QDII-LOF）",
+    "asset_type": "ACTIVE_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "QDII",
+    "lot_size": 1,
+    "signal_symbol": "160216",
+    "trade_symbol": "160216",
+    "risk_clusters": [
+      "COMMODITY",
+      "CROSS_BORDER_EQUITY"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "A",
+    "fund_type": "QDII_LOF",
+    "nav_basis": "cumulative_nav",
+    "notes": "大宗商品 QDII。跨境风险。"
+  },
+  {
+    "symbol": "008682",
+    "name": "富国中证红利指数增强C",
+    "asset_type": "ACTIVE_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "008682",
+    "trade_symbol": "008682",
+    "risk_clusters": [
+      "DIVIDEND_VALUE"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "C",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "红利价值防御。"
+  },
+  {
+    "symbol": "000217",
+    "name": "华安黄金易ETF联接C",
+    "asset_type": "ETF_LINKED_FUND",
+    "exchange": null,
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 1,
+    "signal_symbol": "000217",
+    "trade_symbol": "000217",
+    "risk_clusters": [
+      "GOLD_SAFE_HAVEN"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "share_class": "C",
+    "fund_type": "OPEN_FUND",
+    "nav_basis": "cumulative_nav",
+    "notes": "黄金避险。"
+  },
+  {
+    "symbol": "510300",
+    "name": "沪深300ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "510300",
+    "trade_symbol": "510300",
+    "risk_clusters": [
+      "LARGE_CAP_CORE"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "宽基基准ETF。"
+  },
+  {
+    "symbol": "515000",
+    "name": "科技ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "515000",
+    "trade_symbol": "515000",
+    "risk_clusters": [
+      "SEMICONDUCTOR",
+      "ADVANCED_MANUFACTURING",
+      "SMALL_MID_GROWTH"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "科技主题ETF。涉及半导体和高端制造。"
+  },
+  {
+    "symbol": "512660",
+    "name": "军工ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "512660",
+    "trade_symbol": "512660",
+    "risk_clusters": [
+      "MILITARY_DEFENSE",
+      "ADVANCED_MANUFACTURING"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "军工主题ETF。"
+  },
+  {
+    "symbol": "510880",
+    "name": "红利ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "510880",
+    "trade_symbol": "510880",
+    "risk_clusters": [
+      "DIVIDEND_VALUE"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "红利策略ETF。"
+  },
+  {
+    "symbol": "518880",
+    "name": "黄金ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "518880",
+    "trade_symbol": "518880",
+    "risk_clusters": [
+      "GOLD_SAFE_HAVEN"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "黄金ETF。"
+  },
+  {
+    "symbol": "515030",
+    "name": "新能源汽车ETF",
+    "asset_type": "ETF",
+    "exchange": "SSE",
+    "currency": "CNY",
+    "calendar_group": "CN",
+    "lot_size": 100,
+    "signal_symbol": "515030",
+    "trade_symbol": "515030",
+    "risk_clusters": [
+      "NEW_ENERGY",
+      "ADVANCED_MANUFACTURING",
+      "SMALL_MID_GROWTH"
+    ],
+    "strategy_eligible": true,
+    "execution_eligible": true,
+    "permission": "REAL",
+    "notes": "新能源车ETF。"
+  }
+]

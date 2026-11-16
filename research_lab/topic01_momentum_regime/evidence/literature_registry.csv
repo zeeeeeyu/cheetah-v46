@@ -1,0 +1,6 @@
+lit_id,title,authors_year,topic,external_evidence_strength,url_or_doi,review_status,notes
+LIT-001,Returns to Buying Winners and Selling Losers: Implications for Stock Market Efficiency,Jegadeesh & Titman 1993,T01-01 (momentum),STRONG,https://doi.org/10.1111/j.1540-6261.1993.tb04702.x,PENDING_FORMAL_REVIEW,"候选文献（多市场动量经典）；尚未在本项目内做正式文献综述与评级"
+LIT-002,Value and Momentum Everywhere,Asness Moskowitz & Pedersen 2013,T01-01/T01-02 (cross-asset momentum),STRONG,https://doi.org/10.1111/jofi.12021,PENDING_FORMAL_REVIEW,"候选文献（跨资产动量）；待正式综述"
+LIT-003,Risk-Based Explanations of Momentum Anomalies (综述),多个作者,T01-03 (vol scaling),MODERATE, ,PENDING_FORMAL_REVIEW,"vol scaling 可能改善风险收益但依赖缩放方式与样本；待细分"
+LIT-004,Volatility-Managed Portfolios,Moreira & Muir 2017,T01-03 (vol scaling),MODERATE,https://doi.org/10.1111/jofi.12513,PENDING_FORMAL_REVIEW,"候选文献（波动管理组合）；效应存在但有边界条件"
+LIT-005,Momentum Crashes,Barroso & Santa-Clara 2015,T01-01/T01-10 (momentum risk),MIXED,https://doi.org/10.1111/jofi.12294,PENDING_FORMAL_REVIEW,"动量存在崩溃风险；支持状态/波动调节但非一致有效"

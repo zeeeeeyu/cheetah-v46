@@ -1,0 +1,22 @@
+{
+  "schema_version": "2026-08-07",
+  "records": [
+    {
+      "dataset_id": "market/510050_hashmismatch",
+      "asset_id": "510050",
+      "asset_type": "ETF",
+      "source_provider": "mock_source",
+      "source_endpoint_id": "NOT_FETCHED",
+      "request_parameters": "NOT_FETCHED",
+      "retrieved_at": "2026-08-07T00:00:00",
+      "adjustment": "QFQ",
+      "listing_date": null,
+      "first_date": "2026-01-05",
+      "last_date": "2026-01-07",
+      "row_count": 3,
+      "sha256": "deadbeef00000000000000000000000000000000000000000000000000000000",
+      "schema_version": "2026-08-07",
+      "validation_status": "FROZEN"
+    }
+  ]
+}

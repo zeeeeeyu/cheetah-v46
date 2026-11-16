@@ -1,0 +1,8 @@
+{
+  "schema_version": 3,
+  "mode": "FUND_NAV_ONLY",
+  "current_weights": {"CASH": 1.0},
+  "last_executed_trade_date": null,
+  "account_profile_confirmed": false,
+  "note": "SYNTHETIC_PAPER_TEMPLATE"
+}

@@ -1,0 +1,8 @@
+{
+  "account_id": "MAIN",
+  "default_environment": "PAPER",
+  "allow_live_order_generation": false,
+  "old_systems_are_independent": true,
+  "v42_sibling_dir": "Cheetah_V4.2_fixed",
+  "v451_sibling_dir": "Quant_V4.5.1_fixed"
+}

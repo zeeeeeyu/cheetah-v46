@@ -1,0 +1,21 @@
+{
+  "monitor": {
+    "risk_window": 60,
+    "minimum_history_days": 180,
+    "quiet_zone_quantile": 0.2,
+    "threshold_bounds": {
+      "downside_vol_floor": 0.1,
+      "downside_vol_ceiling": 0.35,
+      "fragmentation_floor": 0.45,
+      "fragmentation_ceiling": 0.75
+    }
+  },
+  "watchlist": [
+    {
+      "symbol": "004813",
+      "name": "观察基金",
+      "cost_nav": null,
+      "note": "可选：仅填写你真实的平均持仓净值。该字段只用于显示相对持仓盈亏，不会生成补仓价格。"
+    }
+  ]
+}

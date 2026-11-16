@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "notes": "事件主题到 ETF 的映射配置。通过配置文件维护，不在策略代码中硬编码。",
+  "mappings": [
+    {
+      "theme": "半导体",
+      "keywords": ["半导体", "芯片", "集成电路", "光刻", "国产芯片"],
+      "etf_symbols": ["512480", "159813"],
+      "event_types": ["POLICY", "INDUSTRY"]
+    },
+    {
+      "theme": "新能源",
+      "keywords": ["新能源", "光伏", "风电", "锂电池", "电动车", "新能源车"],
+      "etf_symbols": ["515030", "159857"],
+      "event_types": ["POLICY", "INDUSTRY", "EARNINGS"]
+    },
+    {
+      "theme": "军工",
+      "keywords": ["军工", "国防", "航天", "卫星", "军费"],
+      "etf_symbols": ["512660", "512710"],
+      "event_types": ["POLICY", "GEOPOLITICAL"]
+    },
+    {
+      "theme": "人工智能",
+      "keywords": ["AI", "人工智能", "大模型", "算力", "机器人"],
+      "etf_symbols": ["562500", "515000"],
+      "event_types": ["INDUSTRY", "EARNINGS"]
+    },
+    {
+      "theme": "医药",
+      "keywords": ["医药", "医疗", "创新药", "生物医药"],
+      "etf_symbols": ["512010", "159929"],
+      "event_types": ["POLICY", "INDUSTRY"]
+    },
+    {
+      "theme": "消费",
+      "keywords": ["消费", "白酒", "食品", "家电"],
+      "etf_symbols": ["159928", "510150"],
+      "event_types": ["MACRO", "EARNINGS"]
+    },
+    {
+      "theme": "金融",
+      "keywords": ["金融", "银行", "券商", "保险", "降息"],
+      "etf_symbols": ["510230", "512800"],
+      "event_types": ["POLICY", "MACRO"]
+    },
+    {
+      "theme": "黄金",
+      "keywords": ["黄金", "贵金属", "避险"],
+      "etf_symbols": ["518880", "159934"],
+      "event_types": ["MACRO", "GEOPOLITICAL"]
+    },
+    {
+      "theme": "大宗商品",
+      "keywords": ["大宗商品", "石油", "原油", "有色", "资源"],
+      "etf_symbols": ["512400"],
+      "event_types": ["MACRO", "GEOPOLITICAL"]
+    },
+    {
+      "theme": "宽基/大盘",
+      "keywords": ["政策", "降准", "改革", "开放", "外资"],
+      "etf_symbols": ["510300", "510050"],
+      "event_types": ["POLICY", "MACRO"]
+    }
+  ]
+}

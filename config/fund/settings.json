@@ -1,0 +1,109 @@
+{
+  "system_name": "Quant V4.5.1 Trusted Low-Frequency Fund Decision System",
+  "mode": "FUND_NAV_ONLY",
+  "benchmark_symbol": "005658",
+  "scheduled_rebalance_interval_trading_days": 20,
+  "minimum_history_days": 126,
+  "data": {
+    "nav_preference": "cumulative_only",
+    "max_staleness_calendar_days": 4,
+    "max_cross_group_signal_lag_calendar_days": 4,
+    "max_single_day_return_abs": 0.2,
+    "provider_mode": "auto_public_direct",
+    "allow_network_refresh": true,
+    "require_direct_symbol_match": true,
+    "auto_refresh_on_run": true,
+    "max_refresh_attempts_per_day": 2,
+    "min_refresh_retry_minutes": 120,
+    "request_interval_seconds": 1.0,
+    "quality_window_trading_days": 180
+  },
+  "signals": {
+    "short_window": 20,
+    "medium_window": 60,
+    "long_window": 120,
+    "fi_window": 60,
+    "minimum_absolute_momentum": 0.0,
+    "minimum_trend_quality": 0.42,
+    "minimum_rank_margin": 0.08,
+    "require_two_day_stability": true
+  },
+  "portfolio": {
+    "max_selected_assets": 3,
+    "max_single_weight": 0.4,
+    "max_pair_correlation": 0.85,
+    "max_sector_weight": 0.6,
+    "neutral_equity_cap": 0.5,
+    "risk_off_equity_cap": 0.2,
+    "cash_symbol": "CASH"
+  },
+  "execution": {
+    "tolerance_band": 0.05,
+    "max_non_emergency_turnover": 0.25,
+    "order_submission_lag_trading_days": 1,
+    "purchase_confirmation_lag_trading_days": 2,
+    "redemption_confirmation_lag_trading_days": 2,
+    "manual_approval_required": true,
+    "require_tradeability_snapshot_same_day": true,
+    "allow_limited_purchase": false,
+    "require_fee_verification": true,
+    "default_subscription_fee_rate": null,
+    "default_redemption_fee_rate": null,
+    "provisional_plan_when_tradeability_unverified": true,
+    "pre_trade_confirmation_required": true,
+    "c_class_holding_days_note": "即使用户已持有 C 类份额超过 30 天，系统也不自动猜测赎回费；只生成策略计划，并在提交前提示核对销售平台。"
+  },
+  "regime": {
+    "hmm_shadow_only": true,
+    "hmm_min_history_days": 252
+  },
+  "backtest": {
+    "minimum_common_days": 252,
+    "historical_tradeability_mode": "BLOCK_UNTIL_VERIFIED",
+    "research_assumption_label": "ASSUMED_OPEN_AND_FIXED_FEES"
+  },
+  "governance": {
+    "champion_name": "Fund NAV V4.2 multi-factor + inverse-downside-vol",
+    "challenger_name": "Fund NAV V4.3 HRP shadow allocation",
+    "min_out_of_sample_decisions_before_review": 30,
+    "min_paper_days_before_review": 120
+  },
+  "review_schedule": {
+    "stable_risk_on_strong_interval_nav_days": 20,
+    "neutral_or_weak_interval_nav_days": 10,
+    "risk_off_interval_nav_days": 3,
+    "data_retry_interval_business_days": 1,
+    "suggested_run_time": "21:00",
+    "timezone_label": "北京时间",
+    "note": "20 个交易日保留为趋势稳定时的基础节奏；Neutral、弱信号或 Risk-Off 时系统建议更早复核。"
+  },
+  "account_profile": {
+    "expected_share_class": "MIXED",
+    "mapping_confirmed": false,
+    "note": "示例候选池。账户映射需在本地人工核对。"
+  },
+  "governance_comparison": {
+    "minimum_common_days_block": 252,
+    "minimum_common_days_research_ready": 504,
+    "fixed_review_interval_nav_days": 20,
+    "starting_nav": 1.0,
+    "purpose": "在同基金直接累计净值、共同日期、T日信号/T+1净值执行与同一成本假设下，对比旧Top-2强者恒强核心和V4.2多资产+现金策略。",
+    "cost_policy": "必须由用户显式选择研究成本假设；不得称为历史真实费率审计。",
+    "automatic_promotion_allowed": false,
+    "missing_fee_policy": "EXCLUDE_FROM_RESEARCH",
+    "long_horizon_target_start": "2014-01-01",
+    "top2_dynamic_exposure": {
+      "risk_on_exposure": 1.0,
+      "neutral_exposure": 0.75,
+      "risk_off_exposure": 0.2,
+      "note": "仅用于研究比较；并非每日强制调仓命令。"
+    },
+    "walk_forward": {
+      "train_nav_observations": 252,
+      "test_nav_observations": 126,
+      "step_nav_observations": 126,
+      "minimum_folds_for_interpretation": 3,
+      "note": "固定规则滚动前推稳定性检验，不在测试期反向调参。"
+    }
+  }
+}

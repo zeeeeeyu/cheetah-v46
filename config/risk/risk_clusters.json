@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "clusters": [
+    {
+      "id": "LARGE_CAP_CORE",
+      "name": "大盘核心",
+      "max_exposure": 0.60,
+      "description": "沪深300等大盘蓝筹核心暴露。宽基指数基金和ETF。",
+      "estimation_quality": "HIGH"
+    },
+    {
+      "id": "SMALL_MID_GROWTH",
+      "name": "中小成长",
+      "max_exposure": 0.40,
+      "description": "中小盘成长风格。中证500/1000和成长主题。",
+      "estimation_quality": "MODERATE"
+    },
+    {
+      "id": "DIVIDEND_VALUE",
+      "name": "红利价值",
+      "max_exposure": 0.40,
+      "description": "高股息、低波动价值策略。中证红利等。",
+      "estimation_quality": "HIGH"
+    },
+    {
+      "id": "ADVANCED_MANUFACTURING",
+      "name": "高端制造",
+      "max_exposure": 0.35,
+      "description": "先进制造、高端装备、军工制造。涵盖主动基金和行业ETF。",
+      "estimation_quality": "MODERATE"
+    },
+    {
+      "id": "MILITARY_DEFENSE",
+      "name": "军工国防",
+      "max_exposure": 0.30,
+      "description": "军工、国防安全主题。",
+      "estimation_quality": "MODERATE"
+    },
+    {
+      "id": "NEW_ENERGY",
+      "name": "新能源",
+      "max_exposure": 0.30,
+      "description": "新能源、新能源汽车产业链。",
+      "estimation_quality": "MODERATE"
+    },
+    {
+      "id": "SEMICONDUCTOR",
+      "name": "半导体",
+      "max_exposure": 0.25,
+      "description": "半导体、芯片产业链。",
+      "estimation_quality": "MODERATE"
+    },
+    {
+      "id": "CONSUMPTION",
+      "name": "消费",
+      "max_exposure": 0.40,
+      "description": "消费行业。食品饮料、家电、医药消费等。",
+      "estimation_quality": "ESTIMATED"
+    },
+    {
+      "id": "HEALTHCARE",
+      "name": "医疗健康",
+      "max_exposure": 0.30,
+      "description": "医药、医疗、生物科技。",
+      "estimation_quality": "ESTIMATED"
+    },
+    {
+      "id": "FINANCIAL",
+      "name": "金融",
+      "max_exposure": 0.40,
+      "description": "银行、保险、券商、地产。",
+      "estimation_quality": "ESTIMATED"
+    },
+    {
+      "id": "GOLD_SAFE_HAVEN",
+      "name": "黄金避险",
+      "max_exposure": 0.20,
+      "description": "黄金及相关避险资产。",
+      "estimation_quality": "HIGH"
+    },
+    {
+      "id": "BOND_DEFENSIVE",
+      "name": "债券防御",
+      "max_exposure": 0.80,
+      "description": "债券基金和固收类防御资产。",
+      "estimation_quality": "HIGH"
+    },
+    {
+      "id": "CROSS_BORDER_EQUITY",
+      "name": "跨境权益",
+      "max_exposure": 0.20,
+      "description": "跨境/QDII权益资产。",
+      "estimation_quality": "ESTIMATED"
+    },
+    {
+      "id": "COMMODITY",
+      "name": "大宗商品",
+      "max_exposure": 0.20,
+      "description": "大宗商品、石油、有色金属等。",
+      "estimation_quality": "ESTIMATED"
+    },
+    {
+      "id": "CASH_DEFENSIVE",
+      "name": "现金防御",
+      "max_exposure": 1.00,
+      "description": "现金及货币基金。无风险。",
+      "estimation_quality": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "fund_symbol": "004813",
+    "etf_symbol": "515030",
+    "relation_type": "THEMATIC_REFERENCE",
+    "correlation": null,
+    "notes": "中欧先进制造 vs 新能源车ETF。主题相关但不是替代关系。"
+  },
+  {
+    "fund_symbol": "005658",
+    "etf_symbol": "510300",
+    "relation_type": "UNDERLYING_ETF",
+    "correlation": 0.95,
+    "notes": "华夏沪深300ETF联接C跟踪沪深300指数，底层资产510300。"
+  },
+  {
+    "fund_symbol": "013566",
+    "etf_symbol": "512660",
+    "relation_type": "THEMATIC_REFERENCE",
+    "correlation": null,
+    "notes": "华夏军工安全与军工ETF主题相关。主动管理 vs 被动跟踪。"
+  },
+  {
+    "fund_symbol": "016263",
+    "etf_symbol": "515000",
+    "relation_type": "RESEARCH_PROXY",
+    "correlation": null,
+    "notes": "银华高端制造业与科技ETF在研究上可作为行业方向参考，但非直接对应。"
+  },
+  {
+    "fund_symbol": "160216",
+    "etf_symbol": "518880",
+    "relation_type": "BENCHMARK_RELATION",
+    "correlation": null,
+    "notes": "国泰大宗商品QDII使用黄金ETF作为商品方向的基准参考。"
+  },
+  {
+    "fund_symbol": "008682",
+    "etf_symbol": "510880",
+    "relation_type": "UNDERLYING_ETF",
+    "correlation": 0.93,
+    "notes": "富国中证红利指数增强C跟踪中证红利，底层关联510880。"
+  },
+  {
+    "fund_symbol": "000217",
+    "etf_symbol": "518880",
+    "relation_type": "UNDERLYING_ETF",
+    "correlation": 0.98,
+    "notes": "华安黄金易ETF联接C底层资产为518880黄金ETF。"
+  }
+]
